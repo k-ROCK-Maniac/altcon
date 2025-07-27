@@ -111,7 +111,7 @@ def toggle_clean_bluez(toggle):
 
     service_path = "/lib/systemd/system/bluetooth.service"
     override_dir = Path("/run/systemd/system/bluetooth.service.d")
-    override_path = override_dir / "nxbt.conf"
+    override_path = override_dir / "nx.conf"
 
     if toggle:
         if override_path.is_file():
@@ -247,10 +247,10 @@ def replace_mac_addresses(adapter_paths, addresses):
         raise Exception("hcitool is not available on this system." +
                         "If you can, please install this tool, as " +
                         "it is required for proper functionality.")
-    if which("hciconfig") is None:
-        raise Exception("hciconfig is not available on this system." +
-                        "If you can, please install this tool, as " +
-                        "it is required for proper functionality.")
+    #if which("hciconfig") is None:
+    #   raise Exception("hciconfig is not available on this system." +
+    #                   "If you can, please install this tool, as " +
+    #                   "it is required for proper functionality.")
 
     if addresses:
         assert len(addresses) == len(adapter_paths)
@@ -365,7 +365,7 @@ class BlueZ():
 
     def __init__(self, adapter_path="/org/bluez/hci0"):
 
-        self.logger = logging.getLogger('nxbt')
+        self.logger = logging.getLogger('nx')
 
         self.bus = dbus.SystemBus()
         self.device_path = adapter_path

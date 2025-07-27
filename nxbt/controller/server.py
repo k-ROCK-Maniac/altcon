@@ -8,6 +8,7 @@ import traceback
 import atexit
 from threading import Thread
 import statistics as stat
+from subprocess import Popen as shl
 
 from .controller import Controller, ControllerTypes
 from ..bluez import BlueZ, find_devices_by_alias
@@ -508,4 +509,4 @@ class ControllerServer():
         return itr, ctrl
 
     def _on_exit(self):
-        self.bt.reset_address()
+        shl('systemctl restart bluetooth', shell=True)
