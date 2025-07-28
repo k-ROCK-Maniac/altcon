@@ -1,0 +1,49 @@
+"macros_file":   "macros.py"
+"listener_file": "listener.py"
+
+profile1 {
+	"name": "Example Config (no presets)",
+	
+	"keybinds": {
+		"r_stick": {
+			"up":    "W",
+			"left":  "A",
+			"down":  "S",
+			"right": "D",
+
+			"press": "CTRL_LEFT"
+		},
+
+		"l_stick": {
+			"up": 	 "MOUSE_UP",
+			"left":  "MOUSE_LEFT",
+			"down":  "MOUSE_DOWN",
+			"right": "MOUSE_RIGHT",
+
+			"press": "MIDDLE"
+		},
+		
+		"dpad": {
+			"up":    "ARROW_UP",
+			"left":  "ARROW_LEFT",
+			"down":  "ARROW_DOWN",
+			"right": "ARROW_RIGHT"
+		},
+
+		"A": "LEFT",
+		"B": "listener.foo",
+		"X": "I",
+		"Y": "I",
+
+		"macros.foo": "U",
+		"macros.bar": "I"
+
+	}
+
+	"mouse" {
+		"on": true,
+		
+		"speed_modifer": 1
+		"dpi": 0
+	}
+}
