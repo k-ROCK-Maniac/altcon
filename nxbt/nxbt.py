@@ -481,7 +481,7 @@ class Nxbt():
         """
 
         if controller_index not in self.manager_state.keys():
-            raise ValueError("Specified controller does not exist")
+            raise ValueError("Specified controller" + controller_index + "does not exist")
 
         self.manager_state[controller_index]["direct_input"] = input_packet
 

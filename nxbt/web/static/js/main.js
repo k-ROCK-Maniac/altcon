@@ -93,7 +93,6 @@ const RIGHT_STICK = [
 ]
 
 let INPUT_PACKET = {
-    // Sticks
     "L_STICK": {
         "PRESSED": false,
         "X_VALUE": 0,
